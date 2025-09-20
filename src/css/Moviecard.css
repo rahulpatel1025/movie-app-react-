@@ -1,0 +1,119 @@
+.movie-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+}
+
+.movie-poster {
+  position: relative;
+  aspect-ratio: 2/3;
+  width: 100%;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+.movie-overlay {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  opacity: 1;
+  z-index: 100;
+  pointer-events: none; /* let the button handle clicks */
+}
+/* Always visible; no hover needed */
+
+.favorite-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+  pointer-events: auto; /* clickable even if parent is non-interactive */
+}
+
+.favorite-btn svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.15);     /* little zoom effect */
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.favorite-btn.active {
+  color: red;                 /* red heart when active */
+}
+
+
+.user-rating {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: #081c22;
+  color: #21d07a;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #1f2a30;
+}
+
+.movie-info {
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+}
+
+.movie-info h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.2rem;
+}
+
+.movie-info .year {
+  color: #aaa;
+  font-weight: 400;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+
+.movie-info p {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Touch devices handled implicitly; overlay is always visible */

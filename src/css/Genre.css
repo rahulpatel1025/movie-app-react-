@@ -1,0 +1,37 @@
+.genre-filter {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 10px 0;
+  margin: 20px 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.genre-filter::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.genre-button {
+  flex: 0 0 auto; /* Prevent shrinking */
+  background: #141414;
+  color: #e5e5e5;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.genre-button:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+.genre-button.active {
+  background: #ff6600;
+  color: #fff;
+  border: 2px solid #ff6600;
+  font-weight: bold;
+}
