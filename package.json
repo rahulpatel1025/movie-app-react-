@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rahulpatel1025.github.io/movie-app-react-", 
+  "homepage": "https://rahulpatel1025.github.io/movie-app-react", 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
